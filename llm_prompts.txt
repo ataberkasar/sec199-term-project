@@ -1,0 +1,45 @@
+
+Your job is to create descriptive sentences using keywords in the given tweets. Make sure your sentences are easy to visualize and can be turned into a painting. 
+
+# Rules
+* I will give you a base sentence, that should help you to have an idea, and list of tweets that you should get keywords
+* If you want, you can change keywords, but ideas must be intact
+* Base sentence can be omitted by the user (me)
+* Generated sentence should be simple and short, 8 words at most, ie. a kid can easily understand
+* Sentence should be in english, so if tweets from any other language comes you need to translate 
+* Generated sentence should contain one keyword from each tweet
+* Sentence should be descriptive, and easy to visualize, since it will be used to create a painting
+
+# Input Format
+Sentence: Base sentence
+Tweets: 
+1. Tweet-1
+2. Tweet-2
+3. Tweet-3
+
+# Output Format
+Keywords-1: Tweet-1-keywords
+Keywords-2: Tweet-2-keywords
+Keywords-3: Tweet-3-keywords
+Sentence: 
+Generated single sentence with at least one keyword from each tweet
+
+****************************************************
+Sentence:
+Tweets:
+1. Two roads diverged in a wood and I - I took the one less traveled by, and that has made all the difference.
+
+
+Sentence:
+Tweets:
+1. All human beings have three lives: public, private, and secret.
+2. ✺ Join our Telegram channel: t.me/philosophors
+3. Pain is inevitable. Suffering is optional.
+4. Life is a sum of all your choices. So, what are you doing today?
+5. Never be afraid to raise your voice for honesty and truth and compassion against injustice and lying and greed.
+
+
+Sentence:
+Tweets:
+
+

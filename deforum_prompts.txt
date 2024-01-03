@@ -1,0 +1,6 @@
+{
+    "0": "Two roads diverged in a wood, less traveled by.",
+    "10": "Publicly, join philosophors. Optional choices shape today's compassionate voice."
+}
+
+Max Frame: 20

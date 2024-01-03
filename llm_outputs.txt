@@ -1,0 +1,10 @@
+######################################################
+#                                                    #
+#  LLM OUTPUTS SHOULD BE INSERTED BELOW              #
+#  OUTPUTS WILL BE USED TO GENERATE DEFORUM PROMPTS  #
+#  EACH PROMPT SHOULD BE SEPERATED BY NEW LINES      #
+#                                                    #
+######################################################
+
+Two roads diverged in a wood, less traveled by.
+Publicly, join philosophors. Optional choices shape today's compassionate voice.
