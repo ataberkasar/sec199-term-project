@@ -14,10 +14,10 @@ for k, v in vars(args).items():
     print(f'{k}:\t\t{v}')
 
 scrape_tweets(args.username, args.since)
-json_to_txt('scraper/output.json')
+json_to_txt(os.path.join('scraper', 'jsons', f'{args.username}_output.json'))
 llm_prompt_generator()
 
 print(colored('\n\nWaiting for llm_outputs.txt', 'green'))
-input('PRESS ENTER TO CONTINUE ')
+input('PRESS ENTER TO CONTINUE AFTER llm_outputs.txt UPDATED ')
 
 deforum_prompt_generator(args.frpp)

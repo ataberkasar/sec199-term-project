@@ -11,20 +11,33 @@ def scrape_tweets(username, _from):
     base_dir = os.path.abspath(os.path.dirname(__file__))
     scraper_dir = os.path.join(base_dir, 'scraper')
 
-    command = [
+    crawl_command = [
         'scrapy', 'crawl', 'NitterSpider',
         '-a', f'username={username}',
         '-a', f'_from={_from}',
-        '-O', 'output.json'
+        '-O', f'jsons/{username}_output.json'
+    ]
+    
+    download_command = [
+        'scrapy', 'crawl', 'ImageSpider',
+        '-a', f'username={username}'
     ]
 
     try:
-        subprocess.run(command, check=True, cwd=scraper_dir, shell=False)
+        subprocess.run(crawl_command, check=True, cwd=scraper_dir, shell=False)
     except subprocess.CalledProcessError as e:
         error_traceback = traceback.format_exc()
         print(colored('[ERROR]', 'red'), e)
         print(colored(error_traceback, 'yellow'))
-        print(f'Error encountered during execution of the command\n{" ".join(command)}')
+        print(f'Error encountered during execution of the command\n{" ".join(crawl_command)}')
+        
+    try:
+        subprocess.run(download_command, check=True, cwd=scraper_dir, shell=False)
+    except subprocess.CalledProcessError as e:
+        error_traceback = traceback.format_exc()
+        print(colored('[ERROR]', 'red'), e)
+        print(colored(error_traceback, 'yellow'))
+        print(f'Error encountered during execution of the command\n{" ".join(download_command)}')
 
 # Preprocessor should be implemented for specific use case
 # An example implementation can be seen below

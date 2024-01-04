@@ -8,7 +8,7 @@ from scraper.utils import *
 import os
 
 
-class NitterspiderSpider(CrawlSpider):
+class NitterSpider(CrawlSpider):
     name = "NitterSpider"
     allowed_domains = ["nitter.net"]
     
@@ -26,8 +26,7 @@ class NitterspiderSpider(CrawlSpider):
         self.username = username
         self._from = time_before(_from) if _from else None
         
-        # self.img_dir = img_dir if img_dir else f'../images/{self.username}/'
-        # os.makedirs(self.img_dir, exist_ok=True)
+        os.makedirs('jsons', exist_ok=True)
         
 
     def parse_start_url(self, response):

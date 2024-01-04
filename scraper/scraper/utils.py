@@ -8,7 +8,7 @@ TIME_INTERVAL_BEFORE : dict[int, datetime] = {
     "h": (lambda x : datetime.now(timezone.utc) - timedelta(hours=x)),
     "d": (lambda x : datetime.now(timezone.utc) - timedelta(days=x)),
     "w": (lambda x : datetime.now(timezone.utc) - timedelta(weeks=x)),
-    "m": (lambda x : datetime.now(timezone.utc) - timedelta(weeks=4*x)),
+    "m": (lambda x : datetime.now(timezone.utc) - timedelta(days=30*x)),
 }
 
 def time_before(time_interval_str: str) -> datetime:
