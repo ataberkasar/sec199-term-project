@@ -1,15 +1,31 @@
-# sec199-term-project
+# Tweet Timelapse Generator
 
-README.md will be updated until 21.01.2024
-Detailed explanations will be provided, simple use steps can be found below for now.
+## Overview
 
----
+This project aims to create a timelapse video by capturing daily changes in a user's tweets. The process involves scraping daily tweets, summarizing them using a Large Language Model (LLM), and generating images based on them using a Stable Diffusion Framework (Deforum).
 
-Run below code to get tweet data from @elonmusk twitter address, and generate preprocessing prompts that should be given to a LLM (eg. ChatGPT). Prompts can be found in llm_prompts.txt
+## Installation
+
+Clone the repository:
+
+   ```bash
+   git clone https://github.com/ataberkasar/sec199-term-project.git
+   cd .\sec199-term-project\
+   ```
+
+Install dependencies:
+
+```bash
+   pip install -r requirements.txt
 ```
-python main.py elonmusk
+
+## Usage
+
+```bash
+   python main.py elonmusk
 ```
+This will scrape the latest tweets of [@elonmusk](https://twitter.com/elonmusk), create llm_prompts.txt, and provide instructions for the next steps.
+You should manually input the prompts from llm_prompts.txt into your LLM (e.g., ChatGPT) and copy-paste the generated summaries into llm_outputs.txt.
+Continue to generate deforum_prompts.txt based on the LLM outputs.
 
-Output of the LLM should be inserted into llm_outputs.txt before continuing.
-
-deforum_prompts.txt then can be used in Stable Diffusion Deforum for frame generation.
+Note: The instructions on how to use Stable Diffusion or Deforum are currently out of scope of this project; however, simple guidelines for their usage will be provided in future updates.
